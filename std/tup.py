@@ -1,5 +1,0 @@
-cpi = (7.5 , 6.2 , 7.76 , 7.5)
-print(cpi)
-sal = ()
-print(sal)
-print(cpi[1:3])
