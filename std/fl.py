@@ -1,0 +1,1 @@
+f = open("scrap2.txt", "r")
