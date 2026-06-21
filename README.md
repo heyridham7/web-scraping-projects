@@ -1,37 +1,46 @@
 # Web Scraping Projects
 
-A collection of Python web scraping projects built using `requests`, `BeautifulSoup`, and `Selenium`. Each project demonstrates a different scraping scenario — static pages, pagination, AJAX-loaded content, and dynamic JavaScript-rendered sites.
+A collection of Python web scraping projects built using `requests`, `BeautifulSoup`, and `Selenium`. Includes both practice projects (using sites built specifically for learning scraping) and real-world projects (scraping live, public data sources).
 
-## Projects
+## 🌍 Real-World Projects
 
-### 1. Books Scraper — `books_scraper.py`
-Scrapes book titles and prices from [books.toscrape.com](https://books.toscrape.com) across multiple pages and saves the data to `book.csv`.
+These scrape live, real websites with genuine public data.
+
+### Wikipedia GDP Scraper — `GDPs.py`
+Scrapes the "List of countries by GDP (nominal)" table from Wikipedia and exports country-wise GDP data to `gdp_by_country.csv`.
 - **Tools:** `requests`, `BeautifulSoup`
-- **Concepts:** Pagination, CSV export, encoding handling
+- **Concepts:** Parsing complex HTML tables, filtering header/junk rows, cleaning footnote markers from text
+- **Source:** en.wikipedia.org (live data)
 
-### 2. Quotes Scraper — `quotes_scraper.py`
-Extracts quotes and their authors from [quotes.toscrape.com](https://quotes.toscrape.com) across 10 pages, saved to `quotes.csv`.
-- **Tools:** `requests`, `BeautifulSoup`
-- **Concepts:** Pagination, CSV export
-
-### 3. Movies Scraper (AJAX) — `movies_scraper.py`
-Scrapes Oscar-winning movie data (title, nominations, awards) from an AJAX-loaded table on [scrapethissite.com](https://www.scrapethissite.com/pages/ajax-javascript/).
-- **Tools:** `Selenium`
-- **Concepts:** Handling AJAX-loaded content, explicit waits
-
-### 4. Jobs Scraper — `jobs_scraper.py`
-Extracts job listings (title, company, location) from [realpython.github.io/fake-jobs](https://realpython.github.io/fake-jobs/), saved to `jobs.csv`.
-- **Tools:** `requests`, `BeautifulSoup`
-- **Concepts:** Error handling, data cleaning, CSV quoting for fields with commas/newlines
-
-### 5. News Scraper — `news_scraper.py`
+### News Scraper — `news_scraper.py`
 Scrapes top story titles and points from [Hacker News](https://news.ycombinator.com), saved to `stories.csv`.
 - **Tools:** `requests`, `BeautifulSoup`
 - **Concepts:** Pairing separate elements with `zip()`
+- **Source:** news.ycombinator.com (live data)
 
-### 6. Price Tracker — `price_tracker.py`
-Logs book prices from books.toscrape.com with a timestamp on every run, appending to `price_history.csv` to build a price history over time.
-- **Tools:** `requests`, `BeautifulSoup`, `datetime`
+## 🧪 Practice Projects
+
+Built on sites specifically designed for scraping practice, used to learn core concepts before tackling real sites.
+
+### Books Scraper — `books_scraper.py`
+Scrapes book titles and prices from books.toscrape.com across multiple pages, saved to `book.csv`.
+- **Concepts:** Pagination, CSV export, encoding handling
+
+### Quotes Scraper — `quotes_scraper.py`
+Extracts quotes and authors from quotes.toscrape.com across 10 pages, saved to `quotes.csv`.
+- **Concepts:** Pagination, CSV export
+
+### Movies Scraper (AJAX) — `movies_scraper.py`
+Scrapes Oscar-winning movie data from an AJAX-loaded table on scrapethissite.com.
+- **Tools:** `Selenium`
+- **Concepts:** Handling AJAX-loaded content, explicit waits
+
+### Jobs Scraper — `jobs_scraper.py`
+Extracts job listings (title, company, location) from realpython.github.io/fake-jobs, saved to `jobs.csv`.
+- **Concepts:** Error handling, data cleaning, CSV quoting for fields with commas/newlines
+
+### Price Tracker — `price_tracker.py`
+Logs book prices from books.toscrape.com with a timestamp on every run, appending to `price_history.csv`.
 - **Concepts:** Append-mode file writing, timestamp logging
 
 ## Setup
@@ -47,7 +56,7 @@ pip install requests beautifulsoup4 selenium webdriver-manager
 ## Running a script
 
 ```bash
-python3 books_scraper.py
+python3 GDPs.py
 ```
 
 ## Tech Stack
@@ -57,7 +66,3 @@ python3 books_scraper.py
 - `BeautifulSoup` — parsing HTML
 - `Selenium` — scraping JavaScript-rendered and AJAX-loaded sites
 - `webdriver-manager` — automatic ChromeDriver management
-
-## Notes
-
-All scrapers target publicly available practice sites built specifically for learning web scraping (books.toscrape.com, quotes.toscrape.com, scrapethissite.com, realpython.github.io/fake-jobs) or public data (Hacker News).
