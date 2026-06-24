@@ -2,7 +2,7 @@
 
 A collection of Python web scraping projects built using `requests`, `BeautifulSoup`, and `Selenium`. Includes both practice projects (using sites built specifically for learning scraping) and real-world projects (scraping live, public data sources).
 
-## 🌍 Real-World Projects
+## Real-World Projects
 
 These scrape live, real websites with genuine public data.
 
@@ -18,7 +18,7 @@ Scrapes top story titles and points from [Hacker News](https://news.ycombinator.
 - **Concepts:** Pairing separate elements with `zip()`
 - **Source:** news.ycombinator.com (live data)
 
-## 🧪 Practice Projects
+##  Practice Projects
 
 Built on sites specifically designed for scraping practice, used to learn core concepts before tackling real sites.
 
